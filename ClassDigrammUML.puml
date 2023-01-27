@@ -1,0 +1,33 @@
+@startuml
+class com.example.myapplication.MainActivity {
+- AppBarConfiguration appBarConfiguration
+- ActivityMainBinding binding
+# void onCreate(Bundle)
++ boolean onCreateOptionsMenu(Menu)
++ boolean onOptionsItemSelected(MenuItem)
++ boolean onSupportNavigateUp()
+}
+class com.example.myapplication.SecondFragment {
+- FragmentSecondBinding binding
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onViewCreated(View,Bundle)
++ void onDestroyView()
+}
+class com.example.myapplication.ExampleInstrumentedTest {
++ void useAppContext()
+}
+class com.example.myapplication.FirstFragment {
+- FragmentFirstBinding binding
++ View onCreateView(LayoutInflater,ViewGroup,Bundle)
++ void onViewCreated(View,Bundle)
++ void onDestroyView()
+}
+class com.example.myapplication.ExampleUnitTest {
++ void addition_isCorrect()
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.myapplication.MainActivity
+androidx.fragment.app.Fragment <|-- com.example.myapplication.SecondFragment
+androidx.fragment.app.Fragment <|-- com.example.myapplication.FirstFragment
+@enduml
