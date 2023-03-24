@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -33,9 +34,9 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
         builder
-                .setContentTitle("Title")
+                .setContentTitle("Уведомление")
                 .setSmallIcon(androidx.core.R.drawable.notification_template_icon_bg)
-                .setContentText("Text");
+                .setContentText("вы зашли в приложение");
 
 
         Notification someBuild = builder.build();
@@ -48,22 +49,22 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void alertDia(){
         AlertDialog.Builder alt_bld = new AlertDialog.Builder (this);
-        alt_bld.setMessage("Диалоговое окно")
+        alt_bld.setMessage("Вы хотите продолжить?")
                 .setCancelable(false)
-                .setPositiveButton("Окно?", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Да", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                     }
                 })
-                .setNegativeButton("Не окно?", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Нет", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
                     }
                 });
         AlertDialog alert = alt_bld.create();
-        alert.setTitle("Окно");
+        alert.setTitle("Уведомление");
         alert.show();
     }
 
@@ -86,16 +87,23 @@ public class MainActivity2 extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
             case R.id.action_web: {
-
+                Intent intent = new Intent(this, WebActivity.class);
+                startActivity(intent);
                 return true;
             }
             case R.id.action_dataBase: {
-                Intent intent = new Intent(this, MainActivity2.class);
+                Intent intent = new Intent(this, DataBaseActivity.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.text_2: {
+                Intent intent = new Intent(this, FilesActivity.class);
                 startActivity(intent);
                 return true;
             }

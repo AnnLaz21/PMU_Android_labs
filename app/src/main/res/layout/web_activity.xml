@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/web_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WebActivity"
+    android:background="#F8D9AA">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="170dp"
+        android:layout_height="73dp"
+        android:layout_x="38dp"
+        android:layout_y="48dp"
+        android:onClick="openWeb"
+        android:text="Открыть"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="172dp"
+        android:layout_height="81dp"
+        android:layout_x="40dp"
+        android:layout_y="148dp"
+        android:onClick="postHttp"
+        android:text="Перейти"
+        android:textSize="24sp" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="331dp"
+        android:layout_height="408dp"
+        android:layout_x="43dp"
+        android:layout_y="248dp" />
+
+</AbsoluteLayout>

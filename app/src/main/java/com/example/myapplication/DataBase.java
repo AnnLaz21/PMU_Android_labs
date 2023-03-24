@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataBase extends SQLiteOpenHelper {
 
-    private static String DATAВASE_NAМE="android_database.db";
+    static String DATAВASE_NAМE="android_database.db";
     private static Integer DATAВASE_VERSION = 1;
     public String UID ="_id";
     public String DATE = "date";
@@ -14,7 +14,7 @@ public class DataBase extends SQLiteOpenHelper {
     public  String ТАВLЕ_NАМЕ = "otchet";
 
     private  String SQL_CREATE_ENТRIES = "CREATE TABLE "+ ТАВLЕ_NАМЕ +
-            " ( " + UID +" integer primary key,"+
+            " ( " + UID +" integer primary key autoincrement,"+
             DATE + " VARCHAR(255), "+USERNAME+" VARCHAR(255));";
 
     private String SQL_DELETE_ENТRIES ="DROP TABLE IF EXISTS" +

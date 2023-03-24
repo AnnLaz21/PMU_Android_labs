@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_database_show"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8D9AA"
+    tools:context=".FilesShowActivity">
+
+    <TextView
+        android:id="@+id/textViewDesc"
+        android:layout_width="307dp"
+        android:layout_height="408dp"
+        android:layout_x="36dp"
+        android:layout_y="30dp"
+        android:background="#F4E1E1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+    />
+
+</AbsoluteLayout>

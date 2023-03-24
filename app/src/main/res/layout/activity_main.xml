@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/text_2"
+    android:id="@+id/main_activity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8D9AA">
 
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="29dp"
         android:layout_y="510dp"
+        android:background="#402B06"
         android:onClick="click"
-        android:text="Button" />
+        android:text="Войти"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:iconTint="#00FFFFFF"
+        app:rippleColor="#00FFFFFF" />
 
     <EditText
         android:id="@+id/editTextTextPassword6"
+        style="@style/TextAppearance.AppCompat"
         android:layout_width="343dp"
         android:layout_height="65dp"
         android:layout_x="19dp"
         android:layout_y="283dp"
+        android:background="#B59E65"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="123456" />
+        android:text="123456"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress2"
+        style="@style/TextAppearance.AppCompat"
         android:layout_width="342dp"
         android:layout_height="61dp"
         android:layout_x="17dp"
         android:layout_y="209dp"
+        android:background="#B59E65"
         android:ems="10"
         android:inputType="textEmailAddress"
-        android:text="login" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="115dp"
-        android:layout_height="84dp"
-        android:layout_x="37dp"
-        android:layout_y="374dp"
-        android:text="Switch" />
+        android:text="login"
+        android:textSize="20sp" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="269dp"
-        android:layout_y="361dp"
-        android:text="CheckBox" />
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="174dp"
+        android:layout_height="67dp"
+        android:layout_x="196dp"
+        android:layout_y="362dp"
+        android:text="Запомнить"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="127dp"
+        android:layout_height="110dp"
         android:layout_x="140dp"
         android:layout_y="50dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/start_avatar" />
 
 </AbsoluteLayout>

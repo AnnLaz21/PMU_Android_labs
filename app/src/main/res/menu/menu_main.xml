@@ -3,13 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.myapplication.MainActivity">
     <item
-        android:id="@+id/action_dataBase"
+        android:id="@+id/text_2"
         android:orderInCategory="100"
-        android:title="База данных"
+        android:title="Файлы"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_web"
         android:orderInCategory="100"
         android:title="Web"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dataBase"
+        android:orderInCategory="100"
+        android:title="База данных"
         app:showAsAction="never" />
 </menu>

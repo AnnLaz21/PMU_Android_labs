@@ -19,11 +19,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
 
     private static final int NOTIFY_ID = 101;
     private static final String CHANNEL_ID = "MyChannel";
@@ -51,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context,"Это уведомление",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(context,"Вы зашли в приложение",Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 500,500);
         toast.show();
 
