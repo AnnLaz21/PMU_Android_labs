@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+//курсовая работа
 
 public class MainActivity extends AppCompatActivity {
 
