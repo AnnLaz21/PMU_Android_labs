@@ -39,10 +39,10 @@ _ListView_ или _GridView_ и требуется, чтобы каждый эл
 
 ```
 @Override
-pubic void onCreateContextMenu(ContextMenu rnenu, View v,ContextMenuinfo rnenuinfo){
-super.onCreateContextMenu(rnenu, v, rnenuinfo);
+pubic void onCreateContextMenu(ContextMenu menu, View v,ContextMenuinfo menuinfo){
+super.onCreateContextMenu(menu, v, menuinfo);
 Menuinflater inflater = getMenuinflater();
-inflater.inflate(R.rnenu.context_rnenu, rnenu);
+inflater.inflate(R.menu.context_menu, menu);
 } 
 ```  
 
@@ -62,7 +62,7 @@ case R.id.delete:
 deleteNote(info.id);
 return true;
 default:
-return super.onContextiternSelected(item);
+return super.onContextitemSelected(item);
   }
 }
 ```
@@ -78,8 +78,9 @@ return super.onContextiternSelected(item);
 а строка контекстных действий исчезает, когда пользователь снимет
 выделение со всех элементов, нажмет кнопку **Back** или выберет действие **Done**,
 расположенное слева.
+
 Чтобы создать такое контекстное меmо, нужно реализовать интерфейс _ActionМode.callback._
-В ero методах обратного вызова вы можете указать действия для строки
+В eгo методах обратного вызова вы можете указать действия для строки
 контекстных действий, реагировать на нажатия пунктов действий и обрабатывать
 другие события жизненного цикла для режима действий. Рассмотрим пример:
 
@@ -142,11 +143,12 @@ return true;
 
 Всплывающее меню представляет собой модальное меню, привязанное к представлению
 _View_. Оно отображается ниже представления, к которому привязано, если
-там есть место, либо поверх него.
-Если для определения меюо используется ХМL, то алгоритм его показа следующий:
-* создайте экземплярр класса PopupМenu с помощью его конструктора, принимающий
+там есть место, либо поверх него. 
+
+Если для определения меню используется ХМL, то алгоритм его показа следующий:
+* создайте экземпляр класса PopupМenu с помощью его конструктора, принимающий
 текущие context и _View_ приложения, к которым должно быть привязано меню;
-* с помощью _Мenulnflater_ загрузите свой ресурс меню в объект _Menu_, возвращенный
+* с помощью _МenuInflater_ загрузите свой ресурс меню в объект _Menu_, возвращенный
 методом _PopupМenu.getмenu()_. На API уровня 14 и выше вместо этого можно
 использовать _PopupМenu.inflate()_;
 * вызовите метод _PopupМenu.show()_.
@@ -167,14 +169,16 @@ pubic void showPopup(View v) {
 PopupМenu popup = new PopupМenu(this, v);
 Menulnflater inflater = popup.getмenulnflater();
 inflater.inflate(R.menu.actions, popup.getMenu());
-popup. show ();
+popup.show();
 }
 ```
 В API уровня 14 и выше можно объединить две строки, которые загружают меню, 
-с помощью _PopupМenu.inflate()_.
+с помощью _PopupМenu.inflate()_. 
+
 Меню закрывается, когда пользователь выбирает один из пунктов или касается
 экрана за пределами области меню. Прослушивать событие закрытия меню можно
-С помощью _PopupМenu.OnDismissListener_.
+с помощью _PopupМenu.OnDismissListener_.
+
 Для выполнения действия, когда пользователь выбирает пункт меню, необходимо
 реализовать интерфейс _PopupМenu.OnМenuItemClickListener_ и зарегистрировать его
 в своем _PopupMenu_, вызвав метод _setOnМenuitemclickListener()_. Когда пользователь
@@ -183,8 +187,8 @@ popup. show ();
 ```
 pubic void showМenu(View v){
 PopupМenu popup = new PopupМenu(this, v);
-// This activity i.mplernents OnМenulternClickListener
-popup.setOnМenultemClickListener(this);
+// This activity implements OnМenuItemClickListener
+popup.setOnМenuItemClickListener(this);
 popup.inflate(R.menu.actions);
 popup. show ( );
 }
@@ -218,10 +222,12 @@ return false;
 
 Для рисования на формах и изображениях используется графическая библиотекаи
 _android.graphics.drawable_. Класс _Drawable_ определяет различные виды графики -
-например, _BitmapDrawable_, _ShapeDrawable_, _LayerDrawable_ И др.
+например, _BitmapDrawable_, _ShapeDrawable_, _LayerDrawable_ и др.
+
 Существуют два способа определения и инициализации объекта _Drawable_. Первый
 заключается в использовании объектов из каталога _res\drawable_, а второй - в создании
 ХМL-файла со свойствами объекта _Drawable_.
+
 В _Аndrоid_-приложениях вы можете использовать изображения следующих форматов:
 * PNG - рекомендуемый формат;
 * JPEG - поддерживаемый формат, но лучше использовать PNG;
@@ -233,6 +239,7 @@ _android.graphics.drawable_. Класс _Drawable_ определяет разл
 программы оптимизируются утилитой _aapt_. Если вам нужно использовать растровые изображения
 без оптимизации, поместите их в каталог _res\raw_ - при компиляции файлы из этого
 каталога оптимизированы не будут.
+
 Рассмотрим подробнее процесс добавления ресурса в проект. Предположим, что
 нам нужно добавить в проект два файла: _foto1.jpg_ и _foto2.jpg_. Поскольку эти имена вы
 потом будете использовать в коде, нужно, чтобы они соответствовали правилу
