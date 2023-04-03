@@ -19,12 +19,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
-//курсовая работа
+
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private static final int NOTIFY_ID = 101;
+   private static final int NOTIFY_ID = 101;
     private static final String CHANNEL_ID = "MyChannel";
     private static final String ACTION_SNOOZE = "Кнопка";
     private static final String EXTRA_NOTIFIC_ID = "Кнопочка";
@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         Context context = getApplicationContext();
